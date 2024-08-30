@@ -1,4 +1,4 @@
-# Capstone_Project_Modul_3_Machine_Learning_THotel_Booking
+# Capstone_Project_Modul_3_Machine_Learning_Hotel_Booking
 Anthonius Valentino B. P. | Purwadhika JCDS Bandung
 
 ## A. Business Problem Understanding
