@@ -1,38 +1,38 @@
 # Capstone_Project_Modul_3_Machine_Learning_THotel_Booking
 Anthonius Valentino B. P. | Purwadhika JCDS Bandung
 
-## A. Pemahaman Masalah Bisnis
+## A. Business Problem Understanding
 
-### Konteks
+### Context
 Dalam industri perhotelan, manajemen pendapatan yang efektif sangat penting karena inventaris yang tetap dan sifat kamar hotel yang mudah kadaluarsa. Pemesanan menjadi dasar untuk peramalan, namun pembatalan menjadi risiko signifikan yang memengaruhi pendapatan dan efisiensi operasional. Tujuan proyek ini adalah mengembangkan model pembelajaran mesin untuk memprediksi pembatalan pemesanan, sehingga mengoptimalkan manajemen inventaris, mengurangi biaya, dan meningkatkan strategi retensi pelanggan.
 
-### Pernyataan Masalah
+### Problem Statement
 Proyek ini mengeksplorasi bagaimana pembatalan mempengaruhi enam metrik inti dalam operasi hotel: Biaya per Kamar yang Terisi (CPOR), Pendapatan per Kamar yang Tersedia (RevPAR), Biaya per Kamar yang Tersedia (CostPAR), Laba Operasi Kotor per Kamar yang Tersedia (GOPPAR), Tenaga Kerja per Kamar yang Tersedia (LPAR), dan Biaya Akuisisi Tamu (GAC). Pembatalan pemesanan yang signifikan mengganggu metrik ini, mengakibatkan penurunan profitabilitas dan peningkatan biaya operasional.
 
-### Tujuan
+### Goals
 Mengembangkan model prediksi menggunakan pembelajaran mesin untuk mengidentifikasi potensi pembatalan pemesanan, sehingga memungkinkan pengambilan keputusan yang lebih baik dalam manajemen pendapatan dan alokasi sumber daya.
 
-## B. Pemahaman Data
+## B. Data Understanding
 
 Dataset `data_hotel_booking_demand.csv` mencakup kolom utama seperti `country`, `market_segment`, `previous_cancellations`, `booking_changes`, `deposit_type`, `days_in_waiting_list`, `customer_type`, `reserved_room_type`, dan `is_canceled`. 
 
 - **Variabel Numerik:** Dievaluasi distribusi dan korelasinya dengan variabel target (`is_canceled`).
 - **Variabel Kategorikal:** Kardinalitas tinggi pada `country` diatasi dengan mengelompokkan kategori yang jarang muncul di bawah "Other."
 
-## C. Pra-pemrosesan Data
+## C. Data Preprocessing
 
 - **Duplikasi:** Menghapus 87,79% baris duplikat untuk mencegah overfitting model.
 - **Nilai Hilang:** Mengimput nilai yang hilang di kolom `country` dan menangani kardinalitas tinggi dengan mengelompokkan kategori langka.
 - **Outlier:** Menangani outlier di `booking_changes` dan `required_car_parking_spaces` menggunakan winsorization.
 - **Data Tidak Seimbang:** Menggunakan Random Over Sampling (ROS) dan SMOTE untuk menangani ketidakseimbangan kelas dalam variabel target (`is_canceled`).
 
-## D. Analisis Data Eksploratif (EDA)
+## D. Exploratory Data Analysis (EDA)
 
 Dilakukan analisis univariat dan bivariat untuk memahami hubungan antara fitur dan pembatalan. Wawasan utama:
 - **Pola Pemesanan:** Pembatalan lebih tinggi terkait dengan segmen pasar tertentu (misalnya, Agen Perjalanan Online) dan tipe pelanggan (misalnya, pelanggan transit).
 - **Transformasi Fitur:** Mengonversi fitur numerik ke kategori untuk interpretasi model yang lebih baik.
 
-## E. Pemodelan
+## E. Modeling
 
 Sepuluh model berbeda diuji, dengan fokus mengoptimalkan skor F0.5 yang menyeimbangkan presisi dan recall, menekankan meminimalkan false positive karena dampaknya terhadap biaya operasional.
 
@@ -43,11 +43,11 @@ Sepuluh model berbeda diuji, dengan fokus mengoptimalkan skor F0.5 yang menyeimb
 4. **XGBoost Classifier:** Mencapai skor F0.5 sebesar 0.5336.
 5. **Logistic Regression:** Mencapai skor F0.5 setelah tuning sebesar 0.5011.
 
-### Model Terbaik: Stacking Classifier
+### Best Model: Stacking Classifier
 - **Kinerja:** Skor F0.5 tertinggi menunjukkan keseimbangan yang baik antara presisi dan recall, menjadikannya yang paling efektif untuk meminimalkan false positive sambil mengidentifikasi pembatalan yang benar.
 - **Analisis Confusion Matrix:** Menunjukkan tingkat true negative dan true positive yang kuat, mengurangi baik false positive maupun false negative.
 
-### Pentingnya Fitur
+### Feature Importance
 Prediktor kunci pembatalan termasuk:
 - **`days_in_waiting_list`:** Waktu tunggu yang lebih lama berkorelasi dengan tingkat pembatalan yang lebih tinggi.
 - **`country`:** Negara tertentu (misalnya, Portugal) menunjukkan kecenderungan pembatalan yang lebih tinggi.
@@ -55,7 +55,7 @@ Prediktor kunci pembatalan termasuk:
 - **`market_segment`:** Pemesanan melalui Agen Perjalanan Online memiliki tingkat pembatalan yang lebih tinggi.
 - **`deposit_type`:** Deposit yang tidak dapat dikembalikan berkorelasi dengan pembatalan yang lebih rendah.
 
-## F. Kesimpulan & Rekomendasi
+## E. Conclusion & Recommendations
 
 ### Kesimpulan
 1. **Kinerja Model:** Stacking Classifier adalah model yang paling efektif, memberikan keseimbangan tinggi antara presisi dan recall untuk memprediksi pembatalan.
