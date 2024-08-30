@@ -21,10 +21,10 @@ Dataset `data_hotel_booking_demand.csv` mencakup kolom utama seperti `country`, 
 
 ## C. Data Preprocessing
 
-- **Duplikasi:** Menghapus 87,79% baris duplikat untuk mencegah overfitting model.
-- **Nilai Hilang:** Mengimput nilai yang hilang di kolom `country` dan menangani kardinalitas tinggi dengan mengelompokkan kategori langka.
+- **Duplicated Data:** Menghapus 87,79% baris duplikat untuk mencegah overfitting model.
+- **Missing Value:** Mengimput nilai yang hilang di kolom `country` dan menangani kardinalitas tinggi dengan mengelompokkan kategori langka.
 - **Outlier:** Menangani outlier di `booking_changes` dan `required_car_parking_spaces` menggunakan winsorization.
-- **Data Tidak Seimbang:** Menggunakan Random Over Sampling (ROS) dan SMOTE untuk menangani ketidakseimbangan kelas dalam variabel target (`is_canceled`).
+- **Imbalance Data:** Menggunakan Random Over Sampling (ROS) dan SMOTE untuk menangani ketidakseimbangan kelas dalam variabel target (`is_canceled`).
 
 ## D. Exploratory Data Analysis (EDA)
 
