@@ -4,13 +4,13 @@ Anthonius Valentino B. P. | Purwadhika JCDS Bandung
 ## A. Business Problem Understanding
 
 ### Context
-Dalam industri perhotelan, manajemen pendapatan yang efektif sangat penting karena inventaris yang tetap dan sifat kamar hotel yang mudah kadaluarsa. Pemesanan menjadi dasar untuk peramalan, namun pembatalan menjadi risiko signifikan yang memengaruhi pendapatan dan efisiensi operasional. Tujuan proyek ini adalah mengembangkan model pembelajaran mesin untuk memprediksi pembatalan pemesanan, sehingga mengoptimalkan manajemen inventaris, mengurangi biaya, dan meningkatkan strategi retensi pelanggan.
+Dalam industri perhotelan, manajemen pendapatan yang efektif sangat penting karena inventaris yang tetap dan sifat kamar hotel yang mudah kadaluarsa. Pemesanan menjadi dasar untuk forecasting, namun pembatalan menjadi risiko signifikan yang memengaruhi pendapatan dan efisiensi operasional. Tujuan proyek ini adalah mengembangkan model machine learning untuk memprediksi pembatalan pemesanan, sehingga mengoptimalkan manajemen inventaris, mengurangi biaya, dan meningkatkan strategi retensi pelanggan.
 
 ### Problem Statement
 Proyek ini mengeksplorasi bagaimana pembatalan mempengaruhi enam metrik inti dalam operasi hotel: Biaya per Kamar yang Terisi (CPOR), Pendapatan per Kamar yang Tersedia (RevPAR), Biaya per Kamar yang Tersedia (CostPAR), Laba Operasi Kotor per Kamar yang Tersedia (GOPPAR), Tenaga Kerja per Kamar yang Tersedia (LPAR), dan Biaya Akuisisi Tamu (GAC). Pembatalan pemesanan yang signifikan mengganggu metrik ini, mengakibatkan penurunan profitabilitas dan peningkatan biaya operasional.
 
 ### Goals
-Mengembangkan model prediksi menggunakan pembelajaran mesin untuk mengidentifikasi potensi pembatalan pemesanan, sehingga memungkinkan pengambilan keputusan yang lebih baik dalam manajemen pendapatan dan alokasi sumber daya.
+Mengembangkan model prediksi menggunakan machine learning untuk mengidentifikasi potensi pembatalan pemesanan, sehingga memungkinkan pengambilan keputusan yang lebih baik dalam manajemen pendapatan dan alokasi sumber daya.
 
 ## B. Data Understanding
 
@@ -59,7 +59,7 @@ Prediktor kunci pembatalan termasuk:
 
 ### Kesimpulan
 1. **Kinerja Model:** Stacking Classifier adalah model yang paling efektif, memberikan keseimbangan tinggi antara presisi dan recall untuk memprediksi pembatalan.
-2. **Dampak Pembelajaran Mesin:** Menggunakan pembelajaran mesin mengurangi CPOR sebesar 67,98%, meningkatkan RevPAR dari $30,14 menjadi $31,51, dan menurunkan GAC dari 16,36% menjadi 13,91%, menunjukkan manfaat operasional dan finansial yang signifikan.
+2. **Dampak Machine Learning:** Menggunakan machine learning mengurangi CPOR sebesar 67,98%, meningkatkan RevPAR dari $30,14 menjadi $31,51, dan menurunkan GAC dari 16,36% menjadi 13,91%, menunjukkan manfaat operasional dan finansial yang signifikan.
 3. **Wawasan Fitur:** Fitur utama yang memengaruhi pembatalan, seperti `days_in_waiting_list` dan `market_segment`, memberikan wawasan yang dapat ditindaklanjuti untuk meningkatkan kebijakan pemesanan dan strategi retensi pelanggan.
 
 ### Rekomendasi
